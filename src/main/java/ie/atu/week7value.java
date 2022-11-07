@@ -6,23 +6,23 @@ public class week7value
 {
     public static void main(String[] args)
     {
-        System.out.println("Please enter a number between 0 - 9 :");
-        Scanner myscan = new Scanner(System.in);
-        try
+        int loop = 1;
+        while (loop >0)
         {
-            int myNum = myscan.nextInt();
+            System.out.println("Please enter a number between 0 - 9 :");
+            Scanner myscan = new Scanner(System.in);
+            try {
+                int myNum = myscan.nextInt();
 
-             if (myNum <= 9 && myNum > 0)
-             {
-                 System.out.println("You entered " + myNum);
-             } else
-             {
-                  System.out.println("Not a valid number");
-        }
-             }
-        catch(InputMismatchException f)
-        {
-            System.out.println("invalid");
+                if (myNum <= 9 && myNum > 0) {
+                    System.out.println("You entered " + myNum);
+                    loop--;
+                } else {
+                    System.out.println("Not a valid number");
+                }
+            } catch (InputMismatchException f) {
+                System.out.println("Invaild");
+            }
         }
     }
 }
